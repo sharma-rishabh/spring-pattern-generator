@@ -3,12 +3,15 @@
  */
 package org.example;
 
+import org.example.patterns.Rectangle;
+
+import java.util.List;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        List<String> pattern = new Rectangle().generatePattern();
+        String join = String.join("\n", pattern);
+        System.out.println(join);
     }
 }
