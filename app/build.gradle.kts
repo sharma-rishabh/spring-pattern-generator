@@ -24,6 +24,8 @@ dependencies {
     implementation("org.springframework:spring-core:6.1.5")
     implementation("org.springframework:spring-context:6.1.5")
     implementation("org.springframework:spring-beans:6.1.5")
+    implementation("org.yaml:snakeyaml:2.0")
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

@@ -1,5 +1,6 @@
 package org.example.patterns;
 
+import org.example.symbolLoader.SymbolLoader;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -8,13 +9,20 @@ import java.util.List;
 
 @Component("rect")
 public class Rectangle implements Pattern{
+    private final SymbolLoader symbolLoader;
+    public Rectangle(SymbolLoader symbolLoader) {
+        this.symbolLoader = symbolLoader;
+    }
+    private String symbol() {
+        return this.symbolLoader.getSymbol();
+    }
 
     private String solidRow(int width) {
-        return "*".repeat(width);
+        return symbol().repeat(width);
     }
 
     private String hollowRow(int width) {
-        return "*" + " ".repeat(width - 2) + "*";
+        return symbol() + " ".repeat(width - 2) + symbol();
     }
     @Override
     public List<String> generatePattern() {
