@@ -5,7 +5,6 @@ package org.example;
 
 import org.example.config.AppConfig;
 import org.example.patterns.Pattern;
-import org.example.patterns.Rectangle;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;

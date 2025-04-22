@@ -21,7 +21,7 @@ public class Triangle implements Pattern{
     @Override
     public List<String> generatePattern() {
         int height = 5;
-        List<String> result= new ArrayList<String>();
+        List<String> result= new ArrayList<>();
         for(int i = 0; i < height; i++) {
             result.add(solidRow(i));
         }
